@@ -1,0 +1,20 @@
+.fish {
+  position: absolute;
+  left: -120px;
+  animation-name: swim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.fish img {
+  width: 100px;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
