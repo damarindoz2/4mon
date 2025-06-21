@@ -25,16 +25,17 @@ export default function Aquarium() {
       {Array.from({ length: 6 }).map((_, i) => (
         <Fish
           key={i}
+          direction={i % 2 === 0 ? "right" : "left"}
           style={{
             top: `${10 + i * 12}%`,
             animationDuration: `${12 + Math.random() * 6}s`,
           }}
-          onClick={triggerEasterEgg}
+          onClick={handleRandomMessage}
         />
       ))}
 
       {Array.from({ length: 8 }).map((_, i) => (
-        <Bubble key={i} onClick={handleRandomMessage} />
+        <Bubble key={i} onClick={triggerEasterEgg} />
       ))}
 
       {selectedMessage && (
